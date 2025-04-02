@@ -1,0 +1,138 @@
+/* Reseteamos algunos estilos predeterminados para que todo empiece "limpio" */
+.titulo{
+    color: #0f7218; /* Cambiamos el color del texto a blanco */
+    font-size: 40px; /* Aumentamos el tamaño de la fuente para que sea más visible */
+    font-family: 'Times New Roman';
+    font-style: italic;
+    text-align: center; /* Centramos el texto */
+    margin-top: 20px; /* Añadimos un margen superior para separarlo del borde superior */
+}
+
+ul {
+    display: flex; /* Usamos Flexbox para que los elementos se coloquen en una fila */
+    justify-content: space-around; /* Distribuimos el espacio entre los elementos de manera uniforme */
+    gap: 10px; /* Añadimos espacio entre los elementos, por si queremos más separación */
+    list-style: none; /* Eliminamos los puntitos de la lista que suelen aparecer por defecto */
+    padding: 0; /* Quitamos el relleno que pueda tener el <ul> */
+    margin: 0; /* También eliminamos el margen para que no haya espacio extra no deseado */
+}
+
+/* Estilos para cada elemento <li> (los elementos del menú) */
+ul li {
+    background: rgba(123,198,199,0.8); /* Aplicamos un fondo semitransparente en azul verdoso */
+    flex-grow: 1; /* Esto permite que cada elemento crezca de forma proporcional, ocupando el mismo espacio */
+    text-align: center; /* Centramos el texto dentro de cada menú */
+}
+
+/* Estilos para los enlaces */
+ul a, ul a:link {
+    font-family: sans-serif; /* Usamos una fuente sans-serif para un estilo moderno y limpio */
+    text-decoration: none; /* Quitamos el subrayado de los enlaces para que se vean más limpios */
+    font-style: italic;
+    color: rgb(2, 7, 3); /* Definimos el color del texto en negro */
+    padding: 15px; /* Añadimos un poco de relleno para que haya espacio dentro de cada "botón" del menú */
+    display: block; /* Hacemos que el enlace ocupe todo el espacio disponible dentro del <li> */
+    width: 100%; /* Ocupamos todo el ancho disponible en el elemento */
+}
+
+        body { /* definiendo el body */
+            background-color: #020a14;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+/* contenedor del loggin*/
+        .login-container {
+            background-color: #036ca4;
+            width: 1000px;
+            height: 700px; /* Aumentamos la altura para acomodar las nuevas características de la tarea con relacion al ejercicio 3 */
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;/* centrando todos los items*/
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+/* contenedor del message*/
+        .welcome-message {
+            background-color: #004b76;
+            width: 100%;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 24px;
+            border-radius: 4px;
+        }
+/* contenedor form del login donde contengo sus parametros*/
+        .login-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-form input {
+            width: 25%;
+            padding: 15px;
+            margin: 10px 0;
+            margin-bottom: 2%;
+            margin-left: 70%;
+            border: 1px solid #004b76;
+            border-radius: 4px;
+        }
+
+        .login-form select {
+            width: 15%;
+            padding: 15px;
+            margin: 10px 0;
+            margin-left: 70%;
+            margin-bottom: 6%;
+            border: 1px solid #004b76;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+/* contenedor de los parametros del login button*/
+        .login-button {
+            background-color: #003d5b;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 22px;
+            font-style: italic;
+            margin-top: 20px;
+            margin-left: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-button i {
+            margin-right: 10px;
+        }
+
+        .login-button:hover {
+            background-color: #002b40;
+        }
+/*definiendo los parametros del footer*/
+        .footer {
+            margin-top: 20px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    
