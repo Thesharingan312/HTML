@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio de Sesión Emmanuel Pallares DAW</title>
-    <link rel="stylesheet" href="style2.css"> <!-- Enlazamos la hoja de estilos externa para mantener el diseño igual en todas las páginas -->
-
+    <link rel="stylesheet" href="style2.css"> <!-- Tu hoja de estilos -->
 </head>
-<!-- Construimos el Body incrustando las clases ya predefinidas anteriormente -->
-
-<body> 
+<body>
     <div class="header">
         <h1 class="titulo">Inicio de Sesión</h1>
-    <div class="login-container"> 
+    </div>
+
+    <div class="login-container">
         <div class="welcome-message">
             Bienvenido al servicio de correo 
         </div>
 
         <form class="login-form">
-            <img src="logo.png" alt="Logo" class="logo"> <!-- Logo de la empresa -->
-            <h2 class="login-title">Iniciar sesión</h2>
+            <div class="login-header">
+                <img class="icono" src="imagenes/icono2.png" alt="Icono Iniciar Sesión" >
+                <h2 class="login-title">Iniciar sesión</h2>
+            </div>
             <input type="text" placeholder="Usuario" required>
             <input type="password" placeholder="Contraseña" required>
             <select>
@@ -39,11 +40,10 @@
             <a href="#">Solicitar Cuenta de Correo</a> -
             <a href="#">¿Ha olvidado la contraseña?</a>
             <ul>
-                <li><a href="servicios.html">Servicios</a></li> <!-- Added meaningful content -->
-                <li><a href="index.html">Volver a Inicio</a></li> <!-- Corrected anchor -->
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="index.html">Volver a Inicio</a></li>
             </ul>
         </div>
     </div>
-
 </body>
 </html>
