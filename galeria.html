@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Galería</h1>
+
+        <!-- Botón para cambiar el tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección de Galería -->
+        <div class="gallery">
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel-images" id="carousel-container">
+                    <!-- Las imágenes se cargarán dinámicamente aquí -->
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para cargar imágenes y controlar el carrusel -->
+    <script>
+        const imageFolder = "imagenes/"; // 📂 Carpeta de imágenes
+
+        async function loadImages() {
+            try {
+                const response = await fetch('imagenes.json'); // 📜 Cargar lista de imágenes
+                const imageNames = await response.json();
+
+                const carouselContainer = document.getElementById("carousel-container");
+
+                // Agregar imágenes dinámicamente
+                imageNames.forEach((img, index) => {
+                    const imageElement = document.createElement("img");
+                    imageElement.src = imageFolder + img;
+                    imageElement.classList.add("slide");
+                    if (index === 0) imageElement.classList.add("active");
+                    carouselContainer.appendChild(imageElement);
+                });
+
+                initCarousel();
+            } catch (error) {
+                console.error("Error cargando imágenes:", error);
+            }
+        }
+
+        function initCarousel() {
+            let slideIndex = 0;
+            const slides = document.querySelectorAll(".slide");
+
+            function changeSlide(n) {
+                slides[slideIndex].classList.remove("active");
+                slideIndex = (slideIndex + n + slides.length) % slides.length;
+                slides[slideIndex].classList.add("active");
+            }
+
+            document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
+            document.querySelector(".next").addEventListener("click", () => changeSlide(1));
+
+            // Cambio automático cada 3 segundos
+            setInterval(() => changeSlide(1), 3000);
+        }
+
+        loadImages();
+    </script>
+</body>
+</html>

@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
-    <!-- Como en las otras páginas, enlazamos la hoja de estilos externa para mantener el diseño igual en todas -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="titulo">Acerca de</h1>
-    <!-- Aquí está el mismo menú de navegación que te permitirá moverte entre las distintas páginas -->
-    <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    <!-- Aquí es donde puedes agregar contenido relacionado con "Acerca de". 
-        Normalmente aquí escribirías algo sobre la historia de la empresa, el equipo, o cualquier dato relevante sobre el sitio. -->
-    <p>Esta es la sección de Acerca de nuestra página web. Aquí puedes encontrar información sobre nuestra misión y visión.</p>
+    <div class="container">
+        <h1 class="titulo">Acerca de</h1>
+        
+        <!-- Botón para cambiar tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="acerca.html" class="active">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <p>Bienvenido a la sección "Acerca de".</p>
+            <p>Aquí puedes encontrar información sobre nuestra misión, visión y valores.</p>
+        </div>
+    </div>
+
+    <!-- Script para cambiar de tema -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>
+

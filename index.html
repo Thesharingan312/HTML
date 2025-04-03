@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
-    <!-- Conectamos la hoja de estilos externa, porque todas las páginas compartirán los mismos estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="titulo">MI PÁGINA WEB</h1>
-    <!-- Aquí está nuestro menú de navegación, que es una lista no ordenada con cuatro enlaces -->
-    <ul>
-        <li><a href="inicio.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
-        <li><a href="acerca.html">Acerca de</a></li> <!-- Enlace a la página de "Acerca de" -->
-        <li><a href="servicios.html">Servicios</a></li> <!-- Enlace a la página de servicios -->
-        <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a la página de contacto -->
-    </ul>
+    <div class="container">
+        <h1 class="titulo">Mi Página Web</h1>
+        
+        <!-- Botón de cambio de tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
+        
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <h2>Bienvenido a mi página web</h2>
+            <p>Esta es una página de práctica con diseño mejorado.</p>
+            <p>Usa el botón de arriba para cambiar entre los temas claro y oscuro.</p>
+        </div>
+    </div>
+
+    <!-- Script para el cambio de tema -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>

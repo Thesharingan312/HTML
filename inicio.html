@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <!-- Seguimos usando la misma hoja de estilos externa para que el diseño sea consistente -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="titulo">Inicio</h1>
-    <!-- El menú de navegación sigue igual para que puedas moverte entre las páginas -->
-    <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-        <!-- Aquí iría el contenido específico de la página de inicio -->
-    <ul>
-        <li><a href="Loggin de Usuario.html">Loggin Usuario</a></li>
+    <div class="container">
+        <h1 class="titulo">Inicio</h1>
+        
+        <!-- Botón para cambiar el tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
 
-    
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html" class="active">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
 
+        <!-- Contenido de la página -->
+        <div class="content">
+            <h2>Bienvenido a la página de inicio</h2>
+            <p>Este es el punto de entrada a nuestra web.</p>
 
-    </ul>
+            <!-- Opción adicional para Login de Usuario -->
+            <ul>
+                <li><a href="Loggin de Usuario.html">🔑 Loggin Usuario</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script para cambiar de tema -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>

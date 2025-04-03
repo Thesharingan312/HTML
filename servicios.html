@@ -4,24 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
-    <!-- Al igual que en las otras páginas, usamos la misma hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="titulo">Servicios</h1>
-    <!-- El mismo menú de navegación, para una experiencia de usuario fluida -->
-    <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    <!-- Aquí iría la lista de servicios que ofrece tu empresa o página web -->
-    <p>Esta es la sección de Servicios. Aquí describimos los servicios que ofrecemos a nuestros clientes.</p>
-    <ul>
-        <li>Servicio 1: Descripción breve del servicio 1</li>
-        <li>Servicio 2: Descripción breve del servicio 2</li>
-        <li>Servicio 3: Descripción breve del servicio 3</li>        
-    </ul>
+    <div class="container">
+        <h1 class="titulo">Servicios</h1>
+        
+        <!-- Botón para cambiar el tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección de Servicios -->
+        <div class="content">
+            <h2>Nuestros Servicios</h2>
+            <p>Conoce los servicios que ofrecemos a nuestros clientes:</p>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>🔧 Servicio 1</h3>
+                    <p>Descripción breve del servicio 1.</p>
+                </div>
+                <div class="service-item">
+                    <h3>💼 Servicio 2</h3>
+                    <p>Descripción breve del servicio 2.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🌐 Servicio 3</h3>
+                    <p>Descripción breve del servicio 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para cambiar de tema -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>

@@ -4,19 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <!-- Seguimos usando la hoja de estilos común para que el menú y el diseño se mantengan iguales -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="titulo">Contacto</h1>
-    <!-- El mismo menú de navegación para que puedas moverte entre todas las páginas -->
-    <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="acerca.html">Acerca de</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-    <!-- Aquí iría el contenido para la sección de contacto. Puedes poner un formulario o los datos de contacto -->
-    <p>Esta es la sección de Contacto. Aquí puedes poner un formulario para que tus clientes se pongan en contacto contigo.</p>
+    <div class="container">
+        <h1 class="titulo">Contacto</h1>
+
+        <!-- Botón para cambiar el tema -->
+        <button id="theme-toggle">🌗 Cambiar Tema</button>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección de Contacto -->
+        <div class="content">
+            <h2>Ponte en contacto con nosotros</h2>
+            <p>Completa el siguiente formulario y nos comunicaremos contigo lo antes posible.</p>
+            
+            <form action="#" method="POST" class="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script para cambiar de tema -->
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>
+
