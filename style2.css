@@ -156,8 +156,11 @@ label:has(input:valid), input:valid{
 label:has(input:invalid), input:invalid{
     color: red;
 }
-
-
+input::placeholder{
+    color:#0f7218;
+    font-style: italic;
+    font-weight: bold;
+}
 
 /* Footer */
 .footer {
