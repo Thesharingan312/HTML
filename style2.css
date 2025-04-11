@@ -84,6 +84,8 @@ ul a, ul a:link {
 }
 
 /* Formulario */
+
+
 .login-form {
     width: 90%;
     margin: 0 auto;
@@ -146,6 +148,16 @@ ul a, ul a:link {
 .login-button:hover {
     background-color: #002b40;
 }
+
+label:has(input:valid), input:valid{
+    color: rgb(45, 156, 45);
+}
+
+label:has(input:invalid), input:invalid{
+    color: red;
+}
+
+
 
 /* Footer */
 .footer {

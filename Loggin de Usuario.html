@@ -21,14 +21,31 @@
                 <img class="icono" src="imagenes/icono2.png" alt="Icono Iniciar Sesión" >
                 <h2 class="login-title">Iniciar sesión</h2>
             </div>
-            <input type="text" placeholder="Usuario" required>
+            <label>
+                User o Correo:
+                <i class="user-icon">👤</i>
+                <input type="text" placeholder="Usuario o ejemplo@correo.com" name="usuario" required>
+            </label>
+            <label>
+                Contraseña:
+                <i class="password-icon">🔑</i>
             <input type="password" placeholder="Contraseña" required>
+            </label>
+            <label class="remember-me">
+                Recordar usuario:
+                <i class="remember-icon">✔️</i>
+                <input type="checkbox" name="remember" value="yes"> 
+            </label>
+            <label >
+                Idioma:
+                <i class="language-icon">🌐</i>
             <select>
                 <option value="es">Español</option>
                 <option value="en">English</option>
                 <option value="fr">Francés</option>
                 <option value="gl">Galego</option>
             </select>
+            </label>
             <button class="login-button">
                 <i class="lock-icon">🔒</i> Iniciar sesión
             </button>
